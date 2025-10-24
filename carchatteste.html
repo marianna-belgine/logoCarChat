@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarChat - Dashboard de Apresentação</title>
+    <!-- Carrega o Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carrega a fonte Inter --><style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Estilo para a tabela de CRM */
+        .crm-table th {
+            /* Aplica estilos do Tailwind: padding, alinhamento, tamanho da fonte, negrito, maiúsculas, espaçamento de letras */
+            @apply px-6 py-4 text-left text-xs font-bold uppercase tracking-wider;
+        }
+        .crm-table td {
+            /* Aplica estilos do Tailwind: padding, sem quebra de linha, tamanho da fonte */
+            @apply px-6 py-4 whitespace-nowrap text-sm;
+        }
+    </style>
+    <!-- Configuração das cores da marca (diretriz do doc) --><script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'background': '#ECECEE', // Fundo principal
+                        'brand-red': '#FF504A',  // Cor dos blocos
+                        'brand-dark': '#192325', // Cor do texto principal
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-brand-dark antialiased">
+
+    <div class="container mx-auto max-w-7xl p-6 md:p-12">
+
+        <!-- LOGO DA CARCHAT --><div class="flex justify-center mb-10">
+            <!-- Logo CarChat (Revertida para PNG que estava funcionando, mantendo o tamanho maior) --><img src="https://raw.githubusercontent.com/danfernandes12/logocarchat/be3f56d92fa95cf0dfcee37b55474082bcdaaf14/baixados%20(3).png" 
+                 alt="Logo CarChat" 
+                 class="h-28 md:h-36 w-auto"  
+                 onerror="this.src='https://placehold.co/300x60/192325/ECECEE?text=Logo+CarChat'; this.onerror=null;">
+        </div>
+
+        <!-- SEÇÃO 1: TÍTULO PRINCIPAL --><header class="text-center mb-12 md:mb-16">
+            <h1 class="text-4xl lg:text-5xl font-extrabold text-brand-dark mb-3">
+                Tudo que sua loja precisa em um único plano.
+            </h1>
+            <p class="text-lg lg:text-xl text-brand-dark/80 max-w-3xl mx-auto">
+                Atendimento humanizado 24/7, gestão de leads e estoque integrado.
+            </p>
+        </header>
+
+        <!-- SEÇÃO 2: ENTREGÁVEIS --><section>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark text-center mb-10">
+                Entregáveis
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Quadrante 1: Atendimento --><div class="bg-brand-red text-white rounded-2xl shadow-xl p-8 flex flex-col">
+                    <h3 class="text-3xl font-bold mb-6">Atendimento: humanizado, rápido e sem interrupções</h3>
+                    
+                    <ul class="space-y-4 text-white/95 flex-grow">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div>
+                                <h4 class="font-bold text-lg text-white">IA humanizada</h4>
+                                <p>Inteligência Artificial que simula um atendente 100% humanizado.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div>
+                                <h4 class="font-bold text-lg text-white">Áudios com sua Voz</h4>
+                                <p>Uma voz dublada com I.A para humanizar ainda mais o atendimento.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div>
+                                <h4 class="font-bold text-lg text-white">Atendimento 24/7</h4>
+                                <p>Sua loja atendendo 24 horas por dia, 7 dias por semana.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div>
+                                <h4 class="font-bold text-lg text-white">Atendimento “polvo”</h4>
+                                <p>A CarChat vai atender todos os clientes que chegarem (ao mesmo tempo).</p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="bg-white text-brand-dark rounded-xl p-6 mt-8 shadow-inner">
+                        <h4 class="font-bold text-lg">Suporte ativo do time CarChat para a sua loja:</h4>
+                        <p class="text-brand-dark/90">Nosso time está disponível para ajudar sempre que necessário.</p>
+                    </div>
+                </div>
+
+                <!-- Quadrante 2: Plataforma e Gestão --><div class="bg-brand-red text-white rounded-2xl shadow-xl p-8 flex flex-col">
+                    <h3 class="text-3xl font-bold mb-6">Plataforma e gestão</h3>
+                    
+                    <ul class="space-y-4 text-white/95 flex-grow">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div>
+                                <h4 class="font-bold text-lg text-white">Plataforma Online</h4>
+                                <p>Toda a equipe conectada em apenas um número de WhatsApp.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div>
+                                <h4 class="font-bold text-lg text-white">Número ideal de usuários</h4>
+                                <p>4 usuários disponíveis.</p>
+                                <p class="text-sm text-white/80">*Caso sua loja precise de mais, é possível comprar usuários adicionais.</p>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div>
+                                <h4 class="font-bold text-lg text-white">Resumo dos Atendimentos</h4>
+                                <p>Após um agendamento bem-sucedido, a CarChat notifica no grupo de comunicação entre a loja e equipe, fornece um resumo da conversa e sinaliza se o lead é **quente 🔥**, **morno 😅** ou **frio 🥶**.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bloco Inferior: Integrações e Funil (ocupando a largura toda) --><div class="mt-8">
+                <div class="bg-brand-red text-white rounded-2xl shadow-xl p-8 flex flex-col">
+                    <h3 class="text-3xl font-bold mb-6">Integrações e Funil</h3>
+                    
+                    <ul class="space-y-4 text-white/95 flex-grow">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div>
+                                <h4 class="font-bold text-lg text-white">Estoque Integrado</h4>
+                                <p>I.A treinada com o estoque da loja, incluindo textos e imagens.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div>
+                                <h4 class="font-bold text-lg text-white">Integração com o Instagram</h4>
+                                <p>Centralize os atendimentos conectando o Instagram à nossa plataforma. Para o Instagram, disponibilizamos uma automação de atendimento direcionando para o WhatsApp (automação é diferente de inteligência artificial, ok?).</p>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div>
+                                <h4 class="font-bold text-lg text-white">Simulações multibanco (Credere)</h4>
+                                <p>Acesso facilitado a múltiplos bancos para simulações rápidas e eficazes, fornecendo em instantes uma lista completa de bancos aprovados ou com alta probabilidade de aprovação.</p>
+                                <p class="text-sm text-white/80 mt-2">Obs.: acréscimo de R$302 para essa funcionalidade.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: INTEGRAÇÕES CRM --><section class="mt-16 md:mt-24">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark text-center mb-4">
+                A CarChat é a parceira do seu CRM.
+            </h2>
+            <p class="text-lg text-brand-dark/80 text-center max-w-4xl mx-auto mb-10">
+                Utilizamos integração com CRMs para consulta de estoque. Podemos integrar com qualquer um, desde que o CRM libere. Veja como é a integração com cada CRM:
+            </p>
+
+            <div class="w-full overflow-hidden overflow-x-auto bg-white rounded-2xl shadow-xl border border-gray-200">
+                <table class="w-full min-w-max crm-table">
+                    <thead class="bg-brand-dark text-white">
+                        <tr>
+                            <th>CRM</th>
+                            <th class="text-center">Espelhar WhatsApp</th>
+                            <th class="text-center">Estoque</th>
+                            <th class="text-center">Criar Card</th>
+                            <th class="text-center">Manipular Card</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-brand-dark">
+                        <tr class="bg-white border-b border-gray-200">
+                            <td class="font-semibold">Boom Sistemas</td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bg-gray-50 border-b border-gray-200">
+                            <td class="font-semibold">Autoconf</td>
+                            <td></td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-200">
+                            <td class="font-semibold">AutoCerto</td>
+                            <td></td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bg-gray-50 border-b border-gray-200">
+                            <td class="font-semibold">Revenda Mais</td>
+                            <td></td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-200">
+                            <td class="font-semibold">Altimus</td>
+                            <td></td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="bg-gray-50 border-b border-gray-200">
+                            <td class="font-semibold">BNDV</td>
+                            <td></td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-200">
+                            <td class="font-semibold">Adset</td>
+                            <td></td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="bg-gray-50 border-b border-gray-200">
+                            <td class="font-semibold">C2S</td>
+                            <td></td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-200">
+                            <td class="font-semibold">Ecosys</td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                        </tr>
+                        <tr class="bg-gray-50 border-b border-gray-200">
+                            <td class="font-semibold">SIG</td>
+                            <td></td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-200">
+                            <td class="font-semibold">Click Garage</td>
+                            <td></td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="bg-gray-50 border-b border-gray-200">
+                            <td class="font-semibold">Multimarcar Online</td>
+                            <td></td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-200">
+                            <td class="font-semibold">Autocloud</td>
+                            <td></td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="bg-gray-50 border-b border-gray-200">
+                            <td class="font-semibold">IntegraAuto</td>
+                            <td></td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-200">
+                            <td class="font-semibold">Bom da Peste</td>
+                            <td></td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="bg-gray-50 border-b border-gray-200">
+                            <td class="font-semibold">ItCar</td>
+                            <td></td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-200">
+                            <td class="font-semibold">Usados BR</td>
+                            <td></td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="font-semibold">Kommo</td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td></td>
+                            <td class="text-center font-bold text-brand-red">x</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: INVESTIMENTO (Movido para cá com fundo preto) --><section class="mt-16 md:mt-24">
+            <div class="bg-brand-dark text-white rounded-2xl shadow-xl p-8 flex flex-col">
+                <h3 class="text-3xl font-bold mb-6">Investimento</h3>
+                
+                <div class="flex-grow">
+                    <p class="text-3xl lg:text-4xl font-extrabold text-white">12 mensalidades de R$ 1.500,00</p>
+                    <p class="text-2xl lg:text-3xl font-bold text-white/90 mt-2">+ R$ 4.000,00 implantação</p>
+                </div>
+                
+                <div class="border-t border-white/30 mt-8 pt-6">
+                    <h4 class="text-xl font-bold uppercase text-white mb-3">OPCIONAL</h4>
+                    <ul class="space-y-2">
+                        <li>
+                            <p class="font-semibold">Simulações multibanco (Credere):</p>
+                            <p class="text-lg font-bold text-white/90">+ R$302 / mensal</p>
+                        </li>
+                        <li class="pt-2">
+                            <p class="font-semibold">Acréscimo de cada usuário:</p>
+                            <p class="text-lg font-bold text-white/90">+ R$50 / mensal</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SEÇÃO 4: FOOTER / PROVA SOCIAL --><footer class="text-center mt-16 md:mt-24 pb-8">
+            <p class="text-3xl lg:text-4xl font-extrabold text-brand-red">
+                A primeira IA automotiva de pré-atendimento do Brasil!
+            </p>
+            <p class="text-2xl lg:text-3xl font-semibold text-brand-dark mt-3">
+                + de 150 lojas conectadas.
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
